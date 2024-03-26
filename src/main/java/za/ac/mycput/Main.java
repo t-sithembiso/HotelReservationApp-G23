@@ -1,4 +1,5 @@
 package za.ac.mycput;
+import za.ac.mycput.domain.Manager;
 import za.ac.mycput.domain.Reservation;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -12,7 +13,12 @@ public class Main {
                 .build();
         System.out.println(reserve.toString());
 
-
+        Manager man = new Manager.ManagerBuilder().setStaffNo("123")
+                .setName("Tebogo")
+                .setPhoneNo("0813798635")
+                .setEmail("221013962@mycput.ac.za")
+                .build();
+        System.out.println(man);
 
         }
     }

@@ -1,4 +1,7 @@
 package za.ac.mycput.domain;
+/*Author Oupa Brian Ramoroka
+   Student Number: 221013962
+ * Date: 26 march 2024  */
 
 import java.util.Objects;
 
@@ -14,6 +17,22 @@ public class Manager {
         this.name = managerBuilder.name;
         this.phoneNo = managerBuilder.phoneNo;
         this.email = managerBuilder.email;
+    }
+
+    public String getStaffNo() {
+        return staffNo;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     @Override
@@ -39,27 +58,28 @@ public class Manager {
     }
 
     public static class ManagerBuilder {
-        private final String staffNo;
-        private final String name;
+        private String staffNo;
+        private String name;
         private String phoneNo;
         private String email;
 
-        public ManagerBuilder(String staffNo, String name) {
+        public ManagerBuilder() {
+            this.staffNo = staffNo;
+            this.name = name;
             this.staffNo = staffNo;
             this.name = name;
 
         }
 
-        public String getStaffNo() {
-            return staffNo;
+
+        public ManagerBuilder setStaffNo(String staffNo) {
+            this.staffNo = staffNo;
+            return this;
         }
 
-        public String getName() {
-            return name;
-        }
-
-        public String getPhoneNo() {
-            return phoneNo;
+        public ManagerBuilder setName(String name) {
+            this.name = name;
+            return this;
         }
 
         public ManagerBuilder setPhoneNo(String phoneNo) {
@@ -67,12 +87,16 @@ public class Manager {
             return this;
         }
 
-        public String getEmail() {
-            return email;
-        }
-
         public ManagerBuilder setEmail(String email) {
             this.email = email;
+            return this;
+        }
+
+        public Manager.ManagerBuilder copy(Manager manager) {
+            this.staffNo = manager.staffNo;
+            this.name = manager.name;
+            this.phoneNo = manager.phoneNo;
+            this.email = manager.email;
             return this;
         }
 
