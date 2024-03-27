@@ -9,5 +9,12 @@ import java.util.List;
 
 public interface IPaymentRepository extends IRepository<Payment, String> {
 
+    Payment read(int id);
+
+    // Implementing the getAllStuff() method
+    List<Payment> getAllStuff();
+
+    List<Payment> getAll();
+
     List<Payment> getall();
 }
