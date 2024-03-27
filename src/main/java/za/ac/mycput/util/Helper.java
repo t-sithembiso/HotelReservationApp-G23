@@ -1,7 +1,6 @@
 package za.ac.mycput.util;
 import java.util.UUID;
 /*Author Thalitha Sithembiso-221123598 (Team lead)
-Sibusiso Kubalo 218316038
  * Date: 21 march 2024  */
 
 public class Helper {
@@ -18,11 +17,8 @@ public class Helper {
 
     }
 
-    public static String generatePaymentId() {
+    public static String generateStaffNo(){
         return UUID.randomUUID().toString();
+
     }
-
-
- 
-
 }
