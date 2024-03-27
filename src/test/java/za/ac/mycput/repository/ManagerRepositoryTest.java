@@ -20,29 +20,33 @@ public class ManagerRepositoryTest {
     private final Manager manager = ManagerFactory.buildManager("0118", "Neo", "08912", "Neo@srig.ac.za");
 
     @Order(1)
-    void create() {
-        Manager managerCreated = repository.create(manager);
-        assertNotNull(managerCreated);
-        System.out.println("Reservation:" + managerCreated);
+    @Test
+    public void create() {
+        Manager newManager = repository.create(manager);
+        assertNotNull(newManager);
+        System.out.println("Manager :" + newManager);
     }
 
     @Order(2)
-    void read() {
-        Manager readManager = repository.read(manager.getStaffNo());
-        assertNotNull(readManager);
-        System.out.println("Reservation:" + readManager);
+    @Test
+    public void read() {
+        Manager viewManager = repository.read(manager.getStaffNo());
+        assertNotNull(viewManager);
+        System.out.println("Manager:" + viewManager);
     }
 
     @Order(3)
-    void update() {
-        Manager newManager = new Manager.ManagerBuilder().copy(manager).setName("Angel").build();
-        Manager updatedManagerDetails = repository.update(newManager);
+    @Test
+    public void update() {
+        Manager updateManager = new Manager.ManagerBuilder().copy(manager).setName("Angel").build();
+        Manager updatedManagerDetails = repository.update(updateManager);
         assertNotNull(updatedManagerDetails);
-        System.out.println("Reservation updated:" + updatedManagerDetails);
+        System.out.println("Manager updated list:" + updatedManagerDetails);
     }
 
     @Order(4)
-    void delete() {
+    @Test
+    public void delete() {
         assertTrue(repository.delete(manager.getStaffNo()));
         System.out.println("Manager deleted successfully");
     }
@@ -51,5 +55,6 @@ public class ManagerRepositoryTest {
     @Test
 
     public void getall() {
+        System.out.println(repository.getall());
     }
 }
