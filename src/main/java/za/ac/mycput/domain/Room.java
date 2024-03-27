@@ -1,5 +1,6 @@
 package za.ac.mycput.domain;
-
+//Okuhle Sithole 221137610
+//https://github.com/sitgi/HotelReservationApp-G23
 import java.util.Objects;
 
 public class Room {
