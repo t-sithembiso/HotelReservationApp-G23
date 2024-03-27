@@ -3,7 +3,8 @@ import za.ac.mycput.domain.Reservation;
 import za.ac.mycput.util.Helper;
 
 /*Author Thalitha Sithembiso-221123598 (Team lead)
- * Date: 21 march 2024  */
+ * Date: 21 march 2024 
+ https://github.com/t-sithembiso/HotelReservationApp-G23 */
 public interface ReservationFactory {
     public static Reservation buildReservation(String reservationID,String startDate, String endDate, String guestName ,int roomNumber){
 
