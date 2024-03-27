@@ -5,14 +5,12 @@ package za.ac.mycput.repository;
  https://github.com/Brian-obr/HotelReservationApp-G23 */
 
 import za.ac.mycput.domain.Manager;
-import za.ac.mycput.domain.Reservation;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class ManagerRepository implements IManagerRepository {
     private static IManagerRepository repository = null;
-    private final List<Manager> listOfManager;
+    private List<Manager> listOfManager;
 
     private ManagerRepository() {
         listOfManager = new ArrayList<Manager>();
