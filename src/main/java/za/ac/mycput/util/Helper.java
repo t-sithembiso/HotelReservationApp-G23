@@ -16,6 +16,18 @@ public class Helper {
         return UUID.randomUUID().toString();
 
     }
+         public static String generateStaffNo(){
+        return UUID.randomUUID().toString();
+
+    }
+     public static String generateInventoryNo(){
+        return UUID.randomUUID().toString();
+
+    } 
+     public static String generatePaymentnId(){
+        return UUID.randomUUID().toString();
+
+    }
 
     public static String generateRoomNumber() {
         return null;
