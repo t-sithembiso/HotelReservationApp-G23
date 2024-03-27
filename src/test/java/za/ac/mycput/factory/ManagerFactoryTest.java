@@ -9,7 +9,7 @@ import za.ac.mycput.domain.Manager;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class ManagerFactoryTest {
-
+    @Test
     void testBuildManager() {
         Manager man = ManagerFactory.buildManager("0198", "Brian", "0813798635", "22101@mycput.ac.za");
         assertNotNull(man);
@@ -20,6 +20,6 @@ public class ManagerFactoryTest {
     void testBuildManagerFail() {
         Manager man = ManagerFactory.buildManager("", "", "", "");
         assertNotNull(man);
-        System.out.println(man);
+        System.out.println(man.toString());
     }
 }

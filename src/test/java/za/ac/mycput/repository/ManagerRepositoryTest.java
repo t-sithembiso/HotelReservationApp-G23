@@ -21,24 +21,24 @@ public class ManagerRepositoryTest {
 
     @Order(1)
     void create() {
-        Manager managerCreated = repository.create(manager);
-        assertNotNull(managerCreated);
-        System.out.println("Reservation:" + managerCreated);
+        Manager newManager = repository.create(manager);
+        assertNotNull(newManager);
+        System.out.println("Manager :" + newManager);
     }
 
     @Order(2)
     void read() {
-        Manager readManager = repository.read(manager.getStaffNo());
-        assertNotNull(readManager);
-        System.out.println("Reservation:" + readManager);
+        Manager viewManager = repository.read(manager.getStaffNo());
+        assertNotNull(viewManager);
+        System.out.println("Manager:" + viewManager);
     }
 
     @Order(3)
     void update() {
-        Manager newManager = new Manager.ManagerBuilder().copy(manager).setName("Angel").build();
-        Manager updatedManagerDetails = repository.update(newManager);
+        Manager updateManager = new Manager.ManagerBuilder().copy(manager).setName("Angel").build();
+        Manager updatedManagerDetails = repository.update(updateManager);
         assertNotNull(updatedManagerDetails);
-        System.out.println("Reservation updated:" + updatedManagerDetails);
+        System.out.println("Manager updated list:" + updatedManagerDetails);
     }
 
     @Order(4)
@@ -51,5 +51,6 @@ public class ManagerRepositoryTest {
     @Test
 
     public void getall() {
+        System.out.println(repository.getall());
     }
 }
