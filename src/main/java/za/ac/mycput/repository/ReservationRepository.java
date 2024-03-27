@@ -3,7 +3,8 @@ import za.ac.mycput.domain.Reservation;
 import java.util.List;
 import java.util.ArrayList;
 /*Author Thalitha Sithembiso-221123598 (Team lead)
- * Date: 21 march 2024  */
+ * Date: 21 march 2024 
+ https://github.com/t-sithembiso/HotelReservationApp-G23 */
 
 public class ReservationRepository implements IReservationRepository{
 

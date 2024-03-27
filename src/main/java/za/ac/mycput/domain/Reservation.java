@@ -1,6 +1,7 @@
 package za.ac.mycput.domain;
 /*Author Thalitha Sithembiso-221123598 (Team lead)
-* Date: 21 march 2024  */
+* Date: 21 march 2024 
+https://github.com/t-sithembiso/HotelReservationApp-G23 */
 
 import java.util.Objects;
 public class Reservation {

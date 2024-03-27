@@ -22,4 +22,10 @@ public class Helper {
         return UUID.randomUUID().toString();
     }
 
+
+    public static String generateStaffNo(){
+        return UUID.randomUUID().toString();// Keeping the implementation from master
+
+    }
+
 }
