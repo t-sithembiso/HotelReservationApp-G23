@@ -18,6 +18,6 @@ public class Helper {
     }
 
     public static String generateRoomNumber() {
-        return UUID.randomUUID().toString();
+        return null;
     }
 }
